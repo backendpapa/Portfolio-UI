@@ -194,8 +194,8 @@
                   right
                   absolute
                 >
-                  <v-icon v-if="open==false">mdi-chevron-up</v-icon>
-                  <v-icon v-else>mdi-chevron-down</v-icon>
+                  <v-icon size="30" v-if="open==false">mdi-chevron-up</v-icon>
+                  <v-icon size="30" v-else>mdi-chevron-down</v-icon>
                 </v-btn>
               
      
