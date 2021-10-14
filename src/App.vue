@@ -190,7 +190,7 @@
                   class="animate__animated animate__fadeIn animate__slower d-flex d-sm-none"
                   fab
                   dark
-                  small
+                  
                   right
                   absolute
                 >
