@@ -4,6 +4,8 @@
       app
       color="white"
       elevation="1"
+      class="animate__animated animate__fadeIn animate__slower"
+      
      
       
     >
@@ -28,63 +30,176 @@
        <v-img src="./assets/me.jpg"></v-img>
      </v-avatar>
      <p class="text-body-2 font-weight-bold mt-3 ml-1 d-none d-sm-flex" >Backend Papa</p>
-     <v-btn plain icon> <v-icon>mdi-chevron-down</v-icon></v-btn>
+     <v-btn plain icon small> <v-icon>mdi-chevron-down</v-icon></v-btn>
     </v-app-bar>
 
 
-    <div class="d-none d-sm-flex">
+    <div class="">
       <v-navigation-drawer
     
-        expand-on-hover
+        
         app
-        mini-variant-width="100"
+        width="100"
         class=" d-none d-sm-flex"
       >
-        <v-list>
-          <v-list-item class="px-2">
-            <v-list-item-avatar>
-              <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
-            </v-list-item-avatar>
-          </v-list-item>
-
-          <v-list-item link>
-            <v-list-item-content>
-              <v-list-item-title class="text-h6">
-                Sandra Adams
-              </v-list-item-title>
-              <v-list-item-subtitle>sandra_a88@gmail.com</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-
-        <v-divider></v-divider>
+        <div style="height:15vh" >
+          <!-- Icon -->
+        </div>
 
         <v-list
-          nav
+          
           dense
+          rounded
+          
+          
         >
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-folder</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>My Files</v-list-item-title>
-          </v-list-item>
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-account-multiple</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Shared with me</v-list-item-title>
-          </v-list-item>
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-star</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Starred</v-list-item-title>
-          </v-list-item>
+         <p v-for="i in nav" :key="i" class="text-center"><v-btn  :to="i.to" icon><v-icon>{{i.icon}}</v-icon></v-btn></p>
+         
         </v-list>
       </v-navigation-drawer>
     </div>
+    <div v-if="open==true" style="position:absolute;bottom:0;right:0;top:20vh;">
+     
+                <div class="animate__animated animate__fadeInRight animate__delay-0.9s">
+                  <v-btn
+                  to="/d"
+                  class="animate__animated animate__headShake "
+                  color="grey"
+                  fab
+                  dark
+                  small
+                  right
+                  absolute
+                >
+                  <v-icon >mdi-home</v-icon>
+                  
+                </v-btn>
+                </div>
+            
+    </div>
+     <div v-if="open==true" style="position:absolute;bottom:0;right:0;top:30vh;">
+     
+           
+               <div class="animate__animated animate__fadeInRight animate__delay-0.7s">
+                  <v-btn
+                  to="/d"
+                  color="grey"
+                  fab
+                  class="animate__animated animate__headShake "
+                  dark
+                  small
+                  right
+                  absolute
+                >
+                  <v-icon >mdi-account</v-icon>
+                  
+                </v-btn>
+               </div>
+              
+    </div>
+     <div v-if="open==true" style="position:absolute;bottom:0;right:0;top:40vh;">
+     
+          
+               <div class="animate__animated animate__fadeInRight animate__delay-0.5s">
+                  <v-btn
+                  class="animate__animated animate__headShake "
+                  to="/d"
+                  color="grey"
+                  fab
+                  dark
+                  small
+                  right
+                  absolute
+                >
+                  <v-icon >mdi-wechat</v-icon>
+                  
+                </v-btn>
+               </div>
+             
+    </div>
+    <div v-if="open==true" style="position:absolute;bottom:0;right:0;top:50vh;">
+     
+           
+               <div class="animate__animated animate__fadeInRight animate__delay-0.3s">
+                  <v-btn
+                  class="animate__animated animate__headShake "
+                  to="/d"
+                  color="grey"
+                  fab
+                  dark
+                  small
+                  right
+                  absolute
+                >
+                  <v-icon >mdi-calendar-text-outline</v-icon>
+                  
+                </v-btn>
+               </div>
+             
+    </div>
+    <div v-if="open==true" style="position:absolute;bottom:0;right:0;top:60vh;">
+     
+                <div class="animate__animated animate__fadeInRight animate__delay-0.1s">
+                  <v-btn
+                  class="animate__animated animate__headShake "
+                  to="/d"
+                  color="grey"
+                  fab
+                  dark
+                  small
+                  right
+                  absolute
+                >
+                  <v-icon >mdi-clock-outline</v-icon>
+                  
+                </v-btn>
+                </div>
+             
+    </div>
 
+    <div  v-if="open==true" style="position:absolute;bottom:0;right:0;top:70vh;">
+     
+           
+             
+               <div  class="animate__animated animate__fadeInRight animate__fast ">
+                  <v-btn
+                
+                class="animate__animated animate__headShake "
+                  to="/d"
+                  color="grey"
+                  fab
+                  dark
+                  small
+                  right
+                  absolute
+                >
+                  <v-icon >mdi-cog-outline</v-icon>
+                  
+                </v-btn>
+               </div>
+       
+          
+    </div>
+    
+      <div class="" style="height:20vh;position:absolute;bottom:0;right:0;top:90vh;" >
+      
+        
+                <v-btn
+                  @click="open=!open"
+                  color="black"
+                  class="animate__animated animate__fadeIn animate__slower"
+                  fab
+                  dark
+                  small
+                  right
+                  absolute
+                >
+                  <v-icon v-if="open==false">mdi-chevron-up</v-icon>
+                  <v-icon v-else>mdi-chevron-down</v-icon>
+                </v-btn>
+              
+     
+      </div>
     <v-main>
       <router-view/>
     </v-main>
@@ -97,7 +212,16 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    nav:[
+      {title:"Home",icon:"mdi-home",to:"/d"},
+      {title:"Account",icon:"mdi-account",to:"/d"},
+      {title:"Home",icon:"mdi-wechat",to:"/d"},
+      {title:"Calender",icon:"mdi-calendar-text-outline",to:"/d"},
+      {title:"Clock",icon:"mdi-clock-outline",to:"/d"},
+      {title:"Setting",icon:"mdi-cog-outline",to:"/d"},
+
+    ],
+    open:false
   }),
   methods:{
     search(){
