@@ -58,7 +58,7 @@
         </v-list>
       </v-navigation-drawer>
     </div>
-    <v-main class="animate__animated animate__fadeIn">
+    <v-main style="overflow-y:scroll;height:100vh" class="animate__animated animate__fadeIn">
       <router-view/>
     </v-main>
     <div v-if="open==true" style="position:absolute;bottom:0;right:0;top:20vh;">
