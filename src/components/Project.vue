@@ -1,11 +1,11 @@
 <template>
   <div>
-      <v-row no-gutters>
+      <v-row no-gutters class="ma-4">
           <p class="text-h6 font-weight-bold">Projects</p>
           <v-spacer></v-spacer>
           <p class="text-h6 grey--text">October 2021</p>
       </v-row>
-      <v-row no-gutters>
+      <v-row no-gutters class="ma-4">
           <v-col cols="10">
               <!-- stat -->
               <v-row no-gutters>
@@ -43,8 +43,8 @@
               </v-row>
           </v-col>
       </v-row>
-      <v-row no-gutters>
-          <v-col cols="12" xl="5" lg="5" v-for="i in items" :key="i">
+      <v-row no-gutters >
+          <v-col cols="12" xl="5" lg="6" sm="6" v-for="i in items" :key="i">
               <v-card hover  :color="i.colorbg"  style="border-radius:15px" class="ma-4 pa-2">
                   <v-row align="center"   justify="center" no-gutters>
                       <div class="pt-4">
