@@ -64,6 +64,7 @@
                       <p class="text-caption font-weight-bold mr-5" style="color:#5F5CBE " >15%</p>
                   </v-row>
                   <br>  
+                  <br>
                   <v-row no-gutters>
                       <v-avatar size="25"><v-img src="../assets/me.jpg"></v-img></v-avatar>
                       <v-avatar size="25" class="ml-n2"><v-img src="../assets/me.jpg"></v-img></v-avatar>
@@ -84,7 +85,9 @@
 
 <script>
 export default {
+    data(){
 
+    }
 }
 </script>
 
