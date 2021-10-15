@@ -45,7 +45,7 @@
       </v-row>
       <v-row no-gutters>
           <v-col cols="12" xl="5" lg="5">
-              <v-card color="#EBEAF7" flat style="border-radius:15px" class="ma-2 pa-2">
+              <v-card color="#EBEAF7" flat style="border-radius:15px" class="ma-4 pa-2">
                   <v-row align="center"   justify="center" no-gutters>
                       <div class="pt-4">
                           <p class="text-caption  font-weight-bold ">October 1,2020</p>
