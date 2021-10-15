@@ -43,7 +43,7 @@
               </v-row>
           </v-col>
       </v-row>
-     <div style="overflow-y:scroll;height:50vh">
+     <div style="overflow-y:scroll;height:60vh">
           <v-row no-gutters >
           <v-col cols="12" xl="5" lg="6" sm="6" v-for="i in items" :key="i">
               <v-card hover  :color="i.colorbg"  style="border-radius:15px" class="ma-4 pa-2">

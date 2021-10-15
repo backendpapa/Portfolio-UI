@@ -4,16 +4,17 @@
      
         <v-row class="d-none d-sm-flex" no-gutters style="height:85vh"  >
           <v-col  cols="12" xl="8" lg="8">
-            <v-card elevation="1" style="border-radius:15px;height:85.7vh" class="pa-5">
+            <v-card elevation="1" style="border-radius:15px;  " class="pa-5">
             <Project />
           </v-card>
           </v-col>
-          <v-col cols="12" xl="4" lg="4">
+          <v-col cols="12" xl="4" lg="4" class="pl-3">
             <Message />
           </v-col>
         
     </v-row>
-     <v-tabs-items v-model="tab">
+    <div class="d-flex d-sm-none">
+       <v-tabs-items v-model="tab">
         <v-tab-item v-for="item in items" :key="item.tab">
           <v-card class="pa-2"  elevation="1" :color="tab==0?'':'#F9FAFD'" style="" >
             
@@ -23,6 +24,7 @@
           
         </v-tab-item>
       </v-tabs-items>
+    </div>
    
    </v-container>
   </div>
