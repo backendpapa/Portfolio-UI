@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="animate__animated animate__fadeIn animate__slow">
       <v-row no-gutters class="ma-4">
           <p class="text-h6 font-weight-bold">Projects</p>
           <v-spacer></v-spacer>

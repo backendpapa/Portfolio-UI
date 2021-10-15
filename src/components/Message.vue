@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="animate__animated animate__fadeIn animate__slow">
        <v-card class="pa-2" elevation="1" style="border-radius:15px;">
              <v-row align="center"   justify="center" no-gutters>
                       <div class="pt-3">
