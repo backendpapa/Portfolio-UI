@@ -2,7 +2,8 @@
   <div>
    <v-container>
      
-        <v-row class="d-none d-sm-flex" no-gutters style="height:85vh"  >
+        <div class="d-sm-none d-md-flex">
+          <v-row class="d-none d-sm-flex" no-gutters style="height:85vh"  >
           <v-col  cols="12" xl="8" lg="8">
             <v-card elevation="1" style="border-radius:15px;  " class="pa-5">
             <Project />
@@ -13,7 +14,9 @@
           </v-col>
         
     </v-row>
+        </div>
     <div class="d-flex d-sm-none">
+      <div style="width:100%" >
        <v-tabs-items v-model="tab">
         <v-tab-item v-for="item in items" :key="item.tab">
           <v-card class="pa-2"  elevation="1" :color="tab==0?'':'#F9FAFD'" style="" >
@@ -24,6 +27,21 @@
           
         </v-tab-item>
       </v-tabs-items>
+    </div>
+    </div>
+        <div style="width:100%" class="d-none d-sm-flex d-md-none">
+          <div style="width:100%" >
+       <v-tabs-items class="" v-model="tab">
+        <v-tab-item v-for="item in items" :key="item.tab">
+          <v-card class="pa-2"  elevation="1" :color="tab==0?'':'#F9FAFD'" style="" >
+            
+              <component class="" v-bind:is="item.content"></component>
+           
+          </v-card>
+          
+        </v-tab-item>
+      </v-tabs-items>
+          </div>
     </div>
    
    </v-container>
