@@ -58,6 +58,9 @@
         </v-list>
       </v-navigation-drawer>
     </div>
+    <v-main class="animate__animated animate__fadeIn">
+      <router-view/>
+    </v-main>
     <div v-if="open==true" style="position:absolute;bottom:0;right:0;top:20vh;">
      
                 <div class="animate__animated animate__fadeInRight animate__delay-0.9s">
@@ -200,9 +203,7 @@
               
      
       </div>
-    <v-main>
-      <router-view/>
-    </v-main>
+    
   </v-app>
 </template>
 
